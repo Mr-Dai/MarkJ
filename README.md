@@ -1,5 +1,8 @@
 # MarkJ
 
+[![Build Status](https://travis-ci.org/Mr-Dai/MarkJ.svg?branch=master)](https://travis-ci.org/Mr-Dai/MarkJ)
+[![codecov](https://codecov.io/gh/Mr-Dai/MarkJ/branch/travis/graph/badge.svg)](https://codecov.io/gh/Mr-Dai/MarkJ)
+
 Markdown library for JVM.
 
 ## Future Tasks
