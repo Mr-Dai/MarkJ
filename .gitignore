@@ -1,0 +1,12 @@
+.gradle/
+
+.idea/
+
+build/
+out/
+classes/
+
+*.md
+*.html
+
+!README.md

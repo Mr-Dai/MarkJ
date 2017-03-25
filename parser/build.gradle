@@ -1,0 +1,6 @@
+dependencies {
+    compile project(':markj-core')
+
+    compile group: 'org.jsoup', name: 'jsoup', version: '1.9.2'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'
+}
