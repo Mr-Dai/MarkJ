@@ -10,9 +10,11 @@ public class Image extends MarkdownLeafNode {
     }
 
     public Image(String link, String altText, String optionalTitle) {
+        if (link == null || link.trim().isEmpty())
+            throw new IllegalArgumentException("The link of an image cannot be empty.");
         this.link = link;
-        this.altText = altText;
-        this.optionalTitle = optionalTitle;
+        this.altText = altText == null ? "" : altText;
+        this.optionalTitle = optionalTitle == null ? "" : optionalTitle;
     }
 
     @Override

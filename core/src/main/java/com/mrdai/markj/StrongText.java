@@ -5,11 +5,13 @@ public class StrongText extends MarkdownLeafNode {
     private final String text;
 
     public StrongText(String text) {
-        this(text, false);
+        this(text, true);
     }
 
     public StrongText(String text, boolean useStar) {
-        this.text = text.trim();
+        if (text == null || text.trim().isEmpty())
+            throw new IllegalArgumentException("The text of a StrongText cannot be empty.");
+        this.text = text.trim().replaceAll("[\n\r]+", " ");
         this.surrounding = useStar ? "**" : "__";
     }
 

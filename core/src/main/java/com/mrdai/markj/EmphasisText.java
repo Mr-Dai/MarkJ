@@ -5,10 +5,12 @@ public class EmphasisText extends MarkdownLeafNode {
     private final String text;
 
     public EmphasisText(String text) {
-        this(text, false);
+        this(text, true);
     }
 
     public EmphasisText(String text, boolean useStar) {
+        if (text == null || text.trim().isEmpty())
+            throw new IllegalArgumentException("Text of an EmphasisText cannot be empty.");
         this.text = text.trim();
         this.surrounding = useStar ? "*" : "_";
     }

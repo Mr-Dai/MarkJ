@@ -7,8 +7,10 @@ public class Header extends MarkdownLeafNode {
     public Header(int level, String text) {
         if (level < 1 || level > 5)
             throw new IllegalArgumentException("Level of header can only be within [1, 5].");
+        if (text == null || text.trim().isEmpty())
+            throw new IllegalArgumentException("Text of header cannot be empty.");
         this.level = level;
-        this.text = text;
+        this.text = text.trim();
     }
 
     @Override
